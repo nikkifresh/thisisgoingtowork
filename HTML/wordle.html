@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Wordle</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin: 40px; }
+    .guess-box { margin: 10px; font-size: 24px; }
+    .correct { color: green; }
+    .close { color: orange; }
+    .wrong { color: gray; }
+  </style>
+</head>
+<body>
+
+  <h1>Mini Wordle</h1>
+  <input type="text" id="guess" maxlength="5" placeholder="Guess a 5-letter word">
+  <button onclick="checkGuess()">Submit</button>
+
+  <div id="result" class="guess-box"></div>
+
+  <script>
+    const secret = "PLANT"; // You can randomize this later
+
+    function checkGuess() {
+      const input = document.getElementById("guess").value.toUpperCase();
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "";
+
+      for (let i = 0; i < 5; i++) {
+        const letter = document.createElement("span");
+        letter.textContent = input[i] || "_";
+        if (input[i] === secret[i]) {
+          letter.className = "correct";
+        } else if (secret.includes(input[i])) {
+          letter.className = "close";
+        } else {
+          letter.className = "wrong";
+        }
+        resultDiv.appendChild(letter);
+      }
+    }
+  </script>
+
+</body>
+</html>

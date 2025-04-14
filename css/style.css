@@ -1,0 +1,41 @@
+/* Meets all requirments:
+At least 4 style definitions (body, .header, .content, .footer)
+Font color specified 
+Font family specified 
+Three styled divs for layout (header, content, footer)*/
+
+body {
+   /* requirment C.v */ background-color: rgb(196, 213, 235);
+   /* requirment D.iii */ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  /*requirment D.ii */  color: #1E3A8A;  
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 2px solid #1E3A8A;
+}
+
+.content {
+    padding: 30px;
+    background-color: #e0ecff;
+    font-size: 18px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #1E3A8A;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
